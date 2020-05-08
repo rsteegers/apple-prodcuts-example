@@ -1,0 +1,16 @@
+<div class="welcome-container">
+  <div class="image-logo-container">
+    <img
+      width="40"
+      alt="Angular Logo"
+      src="assets/images/apple-icon-gray.png"
+    />
+  </div>
+  <a [routerLink]="['/products/iphone']" class="product-link">See our products</a>
+
+  <span class="ad-text">Welcome to Apple</span>
+
+  <div class="product-selector-container">
+    <app-product-selector [productSelected]="productSelected" [vertical]="false"></app-product-selector>
+  </div>
+</div>

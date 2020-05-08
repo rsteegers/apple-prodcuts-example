@@ -1,0 +1,13 @@
+<div class="product-selector-container" [class.selector-horizontal]="vertical === false">
+    <button class="product-selector-iphone" [disabled]="productSelected === 'iphone'" [routerLink]="['/products/iphone']" [class.selector-horizontal]="vertical === false">
+        <img src="assets/images/iphone-icon.png" height="29" width="30">
+    </button>
+    
+    <button class="product-selector-macbook" [disabled]="productSelected === 'macbook'" [routerLink]="['/products/macbook']" [class.selector-horizontal]="vertical === false">
+        <img src="assets/images/macbook-pro-icon.png" height="29" width="50">
+    </button>
+
+    <button class="product-selector-watch" [disabled]="productSelected === 'watch'" [routerLink]="['/products/watch']" [class.selector-horizontal]="vertical === false">
+        <img src="assets/images/apple-watch-icon.png" height="29" width="30">
+    </button>
+</div>

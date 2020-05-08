@@ -1,0 +1,54 @@
+@import "../../../../../assets/scss/variables";
+
+.wrapper {
+  margin: 7px #{$bar-height} ;
+}
+.security-layout {
+  &-logo-container {
+    width: 100%;
+    height: calc(95vh - #{$bar-height});
+    background: linear-gradient(
+      180deg,
+      rgba(90, 200, 250, 1) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    display: flex;
+  }
+
+  &-left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50vw;
+
+    .ad-text {
+      align-self: center;
+      justify-self: center;
+      z-index: 1;
+      font-weight: 500;
+      font-size: 25px;
+      position: absolute;
+      top: 50%;
+    }
+    .image-logo {
+      height: 55vh;
+      width: auto;
+      position: absolute;
+      top: 48%;
+      transform: translateY(-50%);
+    }
+    .current-year {
+      font-size: 3rem;
+      font-weight: bolder;
+      margin-bottom: 0vh;
+    }
+  }
+
+  &-right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+  }
+}

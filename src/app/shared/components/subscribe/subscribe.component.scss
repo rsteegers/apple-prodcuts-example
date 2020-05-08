@@ -1,0 +1,52 @@
+.subscribe-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: #F2F2F2;
+    padding-left: 15%;
+
+    .subscribe-title {
+        display: flex;
+        align-items: flex-end;
+        height: 30%;
+        font-weight: bold;
+        font-size: 36px;
+    }
+
+    .subscribe-input-container {
+        margin-top: 30px;
+        display: flex;
+        height: 55px;
+
+        .input-container {
+            width: 60%;
+            margin-right: 20px;
+            font-size: 14px;
+            
+            input {
+                width: 100%;
+                height: 100%;
+                padding-left: 33px;
+
+                &::placeholder {
+                    color: #CCCCCC;
+                }
+            }
+        }
+
+        .button-container {
+            width: 25%;
+            font-weight: bold;
+            font-size: 14px;
+
+            button {
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                color: white;
+            }
+        }
+
+    }
+}

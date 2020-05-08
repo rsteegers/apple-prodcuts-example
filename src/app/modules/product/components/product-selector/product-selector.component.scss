@@ -1,0 +1,28 @@
+.product-selector-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+
+
+    &.selector-horizontal {
+        flex-direction: row;
+    }
+    
+    button {
+        border: none;
+        margin-bottom: 20px;
+        opacity: 0.3;
+        background-color: transparent;
+        
+        &.selector-horizontal {
+            margin-bottom: 0;
+            margin-left: 20px;
+        }
+    }
+
+    button:disabled {
+        opacity: 1;
+    }
+}
+

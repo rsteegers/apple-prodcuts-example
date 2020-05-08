@@ -1,0 +1,96 @@
+.macbook-info-card {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-left: 2%;
+    background-image: url("~/assets/images/mackbook-pro/shutterstock_1362710882.png"), linear-gradient(to right,black, rgb(87, 87, 87));
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: right;
+
+    .macbook-info-card-column1 {
+        color: white;
+        width: 40%;
+
+        div {
+            display: flex;
+        
+            &.custom-card-product-name {
+                align-items: flex-end;
+                height: 20%;
+                color: #5AC8FA;
+                font-weight: Bold;
+                font-size: 32px;
+            span {
+                margin-bottom: 17px;
+                margin-left: 14px;
+            }
+            }
+        
+            &.custom-card-title {
+                flex-direction: column;
+                justify-content: center;
+
+                height: 40%;
+                font-weight: Bold;
+                }
+        
+            &.custom-card-subtitle {
+                align-items: center;
+
+                height: 30%;
+                width: 65%;
+                color: #999999;
+                font-size: 25px;
+                margin-top: 27px;  
+                line-height: 40px;
+            }
+        }
+
+    }
+
+    .tech-info-container {
+        display: flex;
+        flex-direction: column;
+
+        .tech-info-name {
+            font-size: 20px;
+        }
+
+        .tech-info-value {
+            font-weight: bold;
+        }
+    }
+}  
+
+@media only screen and (max-width: 1779px) {
+    .custom-card-title {
+        font-size: 5vw;
+        line-height: 5vw;
+    }
+
+    .tech-info-value {
+        font-size: 2vw;
+    }
+
+    .separator {
+        margin-left: 10%;
+    }
+  }
+
+  @media only screen and (min-width: 1800px) {
+    .custom-card-title {
+        font-size: 100px;
+        line-height: 100px;
+    }
+
+    .tech-info-value {
+        font-size: 50px;
+    }
+
+    .separator {
+        margin-left: 100px;
+    }
+  }
+  

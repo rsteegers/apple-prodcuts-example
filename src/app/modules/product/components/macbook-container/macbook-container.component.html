@@ -1,0 +1,25 @@
+    <div class="d-flex flex-column">
+      <div class="custom-card-container">
+        <app-macbook-card-info></app-macbook-card-info>
+      </div>
+
+      <div class="bottom-container">
+        <div class="bottom-col-1" [@show-up]="state">
+          <app-product-info [modeBasic]="true"></app-product-info>
+        </div>
+        <div class="bottom-col-2">
+          <div class="img-wrap"  [@move-up-image]="state">
+            <img src="assets/images/mackbook-pro/shutterstock_-2.png" height="auto" width="auto">
+          </div>
+        </div>
+        <div class="bottom-col-3">
+          <div class="subscriber-container" [@move-up-subscriber]="state">
+            <app-subscribe></app-subscribe>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="product-selector-container">
+    <app-product-selector [productSelected]="productSelected"></app-product-selector>
+  </div>

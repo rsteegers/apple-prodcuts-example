@@ -1,0 +1,25 @@
+.change-image-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.custom-circle {
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid gray;
+    box-shadow: 0 0 0 8px white, 0 0 0 9px gray;
+    width: 40px;
+    height: 40px;
+
+    &.selected {
+        box-shadow: 0 0 0 8px white, 0 0 0 9px red;
+    }
+}
+
+.custom-circle-label {
+    color: #707070;
+    font-size: 14px;
+    margin-top: 15px;
+}

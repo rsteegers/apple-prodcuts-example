@@ -1,0 +1,49 @@
+@import "../../../../../assets/scss/variables";
+
+.toolbar {
+  height: $bar-height;
+  padding-left: 0;
+  background-color: white;
+  
+  .logo-container {
+    background: black;  
+    width: $bar-height;
+    height: $bar-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    img {
+      width: calc(#{$bar-height} * 0.7);
+      height: calc(#{$bar-height} * 0.7);
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+
+    .mat-menu-item {
+      display: flex;
+      align-items: center;
+      color: #707070 !important;
+      font-size: 1.25rem;
+      margin-left: 3%;
+
+      &.selected {
+        color: black !important;
+        font-weight: bold;
+      }
+    }
+
+    .chip-container {
+      background: #5AC8FA;
+      border-radius: 23px;
+      color: white;
+      font-size: 20px;
+      width: 150px;
+      text-align: center;
+    }
+  }
+}

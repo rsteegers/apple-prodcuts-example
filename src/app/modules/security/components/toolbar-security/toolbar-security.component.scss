@@ -1,0 +1,18 @@
+@import "../../../../../assets/scss/variables";
+
+.toolbar {
+  height: $bar-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  width: calc(#{$bar-height} * 0.7);
+  height: calc(#{$bar-height} * 0.7);
+  margin: 0 16px;
+}
+

@@ -1,0 +1,32 @@
+  <div class="d-flex">
+    <div class="iphone-left-container">
+      <div class="custom-card-container">
+        <app-custom-card [productName]="customCardProductName" [title]="customCardtitle"
+          [subtitle]="customCardSubtitle">
+        </app-custom-card>
+      </div>
+      <div class="iphone-left-bottom-container">
+        <app-product-info [price]="productInfoPrice"></app-product-info>
+
+        <div>
+          <app-switch-image-opacity [value]="sliderValue" [leftImageUrl]="switchImageOpacityLeftImageUrl"
+            [rigthImageUrl]="switchImageOpacityRigthImageUrl">
+          </app-switch-image-opacity>
+
+          <div class="d-flex justify-content-center">
+            <mat-slider min="0" max="1" step="0.01" value="sliderValue" (input)="onSliderInput($event)"></mat-slider>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="iphone-rigth-container">
+      <app-switch-image-position [value]="sliderValue"[leftImageUrl]="switchImagePositionLeftImageUrl"
+      [rigthImageUrl]="switchImagePositionRigthImageUrl"></app-switch-image-position>
+    </div>
+
+    <div class="product-selector-container">
+      <app-product-selector [productSelected]="productSelected"></app-product-selector>
+    </div>
+  </div>
+  

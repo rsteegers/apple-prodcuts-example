@@ -1,0 +1,28 @@
+<div class="subscribe-container">
+    <div class="subscribe-title">
+        Subscribe Now
+    </div>
+
+    <form [formGroup]="validationsForm" (ngSubmit)="trySubmit(validationsForm)">
+        <div class="subscribe-input-container">
+            <div class="input-container">
+                <input placeholder="Enter the email address" name="emailAddress" formControlName="emailAddress"
+                    required />
+                <ng-container *ngFor="let validation of validationMessages.emailAddress">
+                    <mat-error *ngIf="
+                validationsForm.get('emailAddress').hasError(validation.type) &&
+                (validationsForm.get('emailAddress').dirty ||
+                  validationsForm.get('emailAddress').touched)
+              ">
+                        {{ validation.message }}
+                    </mat-error>
+                </ng-container>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="pointer"
+                    (click)="validationsForm.valid && trySubmit(validationsForm)">Subscribe</button>
+            </div>
+        </div>
+    </form>
+</div>

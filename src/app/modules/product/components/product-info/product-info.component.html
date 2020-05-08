@@ -1,0 +1,4 @@
+<div class="product-info-container">
+    <span *ngIf="!modeBasic" class="product-info-title">From ${{ price }}</span>
+    <span class="product-info-subtitle pointer" [class.basic]="modeBasic">Buy Now ></span>
+  </div>

@@ -1,0 +1,21 @@
+  .product-info-container {
+    display: flex;
+    flex-direction: column;
+    
+    .product-info-title {
+      font-weight: bold;
+      font-size: 50px;
+      color: #CCCCCC;
+      line-height: 50px;
+    }
+
+    .product-info-subtitle {
+      font-weight: bold;
+      font-size: 20px;
+      color: red;
+    }
+
+    .product-info-subtitle.basic {
+      color: blue;
+    }
+  }

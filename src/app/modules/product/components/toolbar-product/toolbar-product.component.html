@@ -1,0 +1,32 @@
+ <!-- Toolbar -->
+<mat-toolbar class="toolbar grid-layout">
+    <div class="logo-container pointer" [routerLink]="['/products/welcome']">
+      <img src="assets/images/apple-icon-white.png" height="50" width="50">
+    </div>
+    <div class="toolbar__content">
+      <ng-content></ng-content>
+      <a mat-menu-item [routerLink]="['/products/iphone']" [class.selected]="productSelected === 'iphone'">
+        Iphone
+      </a>
+
+      <a mat-menu-item [routerLink]="['/products/macbook']" [class.selected]="productSelected === 'macbook'">
+        MacBook Pro
+      </a>
+
+      <a mat-menu-item [routerLink]="['/products/watch']" [class.selected]="productSelected === 'watch'">
+        Watch
+      </a>
+
+      <a mat-menu-item class="pointer">
+        <div class="chip-container">
+          Notify me
+        </div>
+      </a>
+
+      <a mat-menu-item href="" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </a>
+     
+    </div>
+  </mat-toolbar>

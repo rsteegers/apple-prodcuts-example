@@ -1,0 +1,7 @@
+@import "../../../../../assets/scss/variables";
+
+.wrapper {
+  height: calc(100vh - #{$bar-height});
+  margin-top: 3px;
+  margin-left: #{$bar-height};
+}

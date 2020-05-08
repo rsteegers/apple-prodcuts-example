@@ -1,0 +1,56 @@
+@import "../../../../../assets/scss/variables";
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: calc(100vw - #{$bar-height});
+    height: calc(100vh - #{$bar-height});
+    background: linear-gradient(90deg, #F2F2F2 0%, #FFFFFF00 100%);
+  
+    .ad-text {
+      align-self: center;
+      justify-self: center;
+      z-index: 1;
+      font-weight: bold;
+      font-size: 5em;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .image-logo-container {
+      position: absolute;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 40vh;
+
+      img {  
+        width: auto;
+        height: 45vh;
+      }
+    }
+
+    .product-link {
+      position: absolute;
+      color: #5AC8FA !important;
+      font-size: 20px;
+      font-weight: 500; 
+      z-index: 1;
+      bottom: 28%;
+    }
+
+    .product-selector-container {
+      position: absolute;
+      z-index: 20;
+      bottom: 12%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }

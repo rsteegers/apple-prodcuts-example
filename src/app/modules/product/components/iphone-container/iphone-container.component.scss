@@ -1,0 +1,40 @@
+.iphone-left-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  max-width: 60%;
+  min-width: 60%;
+  height: 90vh;
+
+  .custom-card-container {
+    height: 60vh;
+    margin-right: 10%;
+    margin-bottom: 50px;
+  }
+
+  .iphone-left-bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 12%;
+    margin-right: 7%;
+    height: 40vh;
+  }
+}
+
+.iphone-rigth-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  height: 90vh;
+  padding-left: 4%;
+}
+
+.product-selector-container {
+  z-index: 9;
+  position: absolute;
+  top: 50%;
+  left: 95%;
+}

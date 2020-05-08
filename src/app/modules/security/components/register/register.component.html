@@ -1,0 +1,135 @@
+<div class="register-conatiner">
+  <div class="title">
+    <h1>Apple Sign Up</h1>
+    <h3>Sign up with Apple</h3>
+  </div>
+  <form
+    fxLayout="row wrap"
+    [formGroup]="validationsForm"
+    (ngSubmit)="trySubmit(validationsForm.value)"
+  >
+    <div
+      fxFlex="100"
+      fxFlex.gt-sm="100"
+      class="px-1 mb-3"
+      ngClass.sm="mt-1"
+      ngClass.xs="mt-1"
+    >
+      <mat-form-field class="w-100" appearance="outline">
+        <input
+          matInput
+          placeholder="Email (required)"
+          name="email"
+          formControlName="email"
+          required
+        />
+      </mat-form-field>
+      <ng-container *ngFor="let validation of validationMessages.email">
+        <mat-error
+          *ngIf="
+            validationsForm.get('email').hasError(validation.type) &&
+            (validationsForm.get('email').dirty ||
+              validationsForm.get('email').touched)
+          "
+        >
+          {{ validation.message }}
+        </mat-error>
+      </ng-container>
+    </div>
+
+    <div
+      fxFlex="100"
+      fxFlex.gt-sm="100"
+      class="px-1 mb-3"
+      ngClass.sm="mt-1"
+      ngClass.xs="mt-1"
+    >
+      <mat-form-field class="w-100" appearance="outline">
+        <input
+          matInput
+          type="password"
+          placeholder="Password (required)"
+          name="password"
+          formControlName="password"
+          required
+        />
+      </mat-form-field>
+      <ng-container *ngFor="let validation of validationMessages.password">
+        <mat-error
+          *ngIf="
+            validationsForm.get('password').hasError(validation.type) &&
+            (validationsForm.get('password').dirty ||
+              validationsForm.get('password').touched)
+          "
+        >
+          {{ validation.message }}
+        </mat-error>
+      </ng-container>
+    </div>
+
+    <div
+      fxFlex="100"
+      fxFlex.gt-sm="100"
+      class="px-1 mb-3"
+      ngClass.sm="mt-1"
+      ngClass.xs="mt-1"
+    >
+      <mat-form-field class="w-100" appearance="outline">
+        <input
+          matInput
+          type="password"
+          placeholder="Repeat Password"
+          name="repeat-password"
+          formControlName="repeatPassword"
+        />
+      </mat-form-field>
+      <ng-container
+        *ngFor="let validation of validationMessages.repeatPassword"
+      >
+        <mat-error
+          *ngIf="validationsForm.get('repeatPassword').hasError('passwordsNotEqual')"
+        >
+          {{ validation.message }}
+        </mat-error>
+      </ng-container>
+    </div>
+    
+    <div
+      fxFlex="100"
+      fxFlex.gt-sm="100"
+      class="px-1 mb-3"
+      ngClass.sm="mt-1"
+      ngClass.xs="mt-1"
+    >
+      <mat-error>{{ errorMessage }}</mat-error>
+    </div>
+    <div
+      class="button-wrap"
+      fxFlex="100"
+      fxFlex.gt-sm="100"
+      class="px-1"
+      ngClass.sm="mt-1"
+      ngClass.xs="mt-1"
+    >
+      <button
+        class="main-button"
+        mat-stroked-button
+        type="submit"
+        (click)="validationsForm.valid && trySubmit(validationsForm.value)"
+      >
+        Register
+      </button>
+    </div>
+    <div
+      fxFlex="100"
+      fxFlex.gt-sm="100"
+      class="px-1"
+      ngClass.sm="mt-1"
+      ngClass.xs="mt-1"
+    >
+      <p style="padding-top: 2em;">
+        <a href="./security/login">Click me!</a> if you already have an account.
+      </p>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,61 @@
+.watch-left-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 90vh;
+  
+    .custom-card-container {
+      height: 70vh;
+      margin-left: -100px;
+      margin-right: 100px;
+    }
+  
+    .watch-left-bottom-container {
+      display: flex;
+      align-items: center;
+      margin-left: 12%;
+      margin-right: 7%;
+      height: 20vh;
+      margin-top: 20vh;
+    }
+  }
+  
+  .watch-rigth-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    width: 40%;
+    height: 90vh;
+    padding-left: 4%;
+
+    .change-image-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 70vh;
+
+      margin-left: -200px;
+      margin-right: 200px;
+    }
+
+    .watch-rigth-bottom-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 20vh;
+      margin-top: 25vh;
+
+      app-custom-circle-button {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  .product-selector-container {
+    z-index: 9;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+  }
+  

@@ -1,0 +1,14 @@
+.switch-image-opacity-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .switch-image-left {
+        margin-right: 42px;
+        opacity: 1;
+    }
+
+    .switch-image-rigth {
+        opacity: 0.2;
+    }
+}

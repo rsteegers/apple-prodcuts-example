@@ -1,0 +1,40 @@
+  <div class="d-flex">
+    <div class="watch-left-container">
+      <div class="custom-card-container" [@move-card]="state">
+        <app-custom-card [productName]="customCardProductName" [title]="customCardtitle" [subtitle]="customCardSubtitle"
+          [mode2]="true">
+        </app-custom-card>
+      </div>
+      <div class="watch-left-bottom-container">
+        <app-product-info [price]="productInfoPrice" [@move-up]="state" ></app-product-info>
+      </div>
+    </div>
+
+    <div class="watch-rigth-container">
+      <div class="change-image-container" [@move-watch]="state">
+        <app-change-image
+          [firstImageUrl]="changeImageFirstImageUrl"
+          [secondImageUrl]="changeImageSecondImageUrl"
+          [firstImageSelected]="firstImageSelected">
+        </app-change-image>
+      </div>
+      <div class="watch-rigth-bottom-container" >
+        <app-custom-circle-button [@move-up]="state"
+          [color]="whiteSelectorColor"
+          [label]="whiteSelectorLabel"
+          [selected]="firstImageSelected"
+          (clicked)="onClickSelector(true)"
+          ></app-custom-circle-button>
+        <app-custom-circle-button [@move-up]="state"
+          [color]="blackSelectorColor"
+          [label]="blackSelectorLabel"
+          [selected]="!firstImageSelected"
+          (clicked)="onClickSelector(false)"
+          ></app-custom-circle-button>
+      </div>
+    </div>
+
+    <div class="product-selector-container">
+      <app-product-selector [productSelected]="productSelected"></app-product-selector>
+    </div>
+  </div>
