@@ -20,7 +20,7 @@ public validationsForm: FormGroup;
       { type: 'required', message: 'Password is required.' },
       {
         type: 'minlength',
-        message: 'Password must be at least 5 characters long.'
+        message: 'Password must be at least 6 characters long.'
       },
     ],
     repeatPassword: [
@@ -60,7 +60,7 @@ public validationsForm: FormGroup;
       ),
       password: new FormControl(
         '',
-        Validators.compose([Validators.minLength(5), Validators.required])
+        Validators.compose([Validators.minLength(6), Validators.required])
       ),
       repeatPassword: new FormControl(
         '',
