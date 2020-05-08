@@ -1,5 +1,6 @@
 # Apple Products Example
-Test project that showcases frontend abilities: https://apple-products-test-baff9.web.app/
+Test project that showcases frontend abilities: https://apple-products-test-baff9.web.app/. If nothing happens when clicking the registration button in the Chrome browser, then open a Chrome browser incognito or access this link: https://apple-products-test-baff9.web.app/security/register
+
 ## Development server
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 ## Build
